@@ -1,0 +1,557 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["hi","Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day","hey","knock knock", "i'm back"],
+     "responses": ["Hello, thanks for asking", "Hi Good to see you ", "Hi there, how can I help?","Hello i am here to solve your doubt"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure","come to ask next doubt","call me on rising next problem", "always welcome with doubts"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand","can you ask question in another manner"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?","what is your work","what type of answers do you give"],
+     "responses": ["Ask me any doubt about dbms","i'll give best suitable answer for your dbms question"],
+     "context": [""]
+    },
+    {"tag": "data",
+        "patterns": ["what is data?", "what is the use of the data?", "why data is useful","data","define data"],
+        "responses": ["Data is defined as facts or figures, or information that's stored in or used by a computer.","Factual information in a form that can be input to, created by, processed by, stored in, and output by a computer."],
+        "context": [""]
+    },
+    {"tag": "database",
+        "patterns": ["what is database?", "what is the use of the database?", "why database is useful","database","define database","why database"],
+        "responses": ["A database is an organized collection of structured information, or data, typically stored electronically in a computer system","Database is the collection of the data in perticular format","The data can then be easily accessed, managed, modified, updated, controlled, and organized in database","Database is a place/container where all the data is stored."],
+        "context": [""]
+    },
+    {"tag": "need",
+        "patterns": ["What type of data is stored in database?"],
+        "responses": ["data in the database is stored in the electronic form, in structured or unstructured manner","In a database, we would be grouping only related data together and storing them under one group name called table."],
+        "context": [""]
+    },
+    {"tag": "table",
+        "patterns": ["how the data is stored in dbms?", "what are tables", "relations"],
+        "responses": ["data is stored in the form of tables in the relational database, relations means the tables", "data is stored in the form of rows and columns known as table or relations"],
+        "context": [""]
+    },
+    {"tag": "dbms",
+        "patterns": ["dbms", "what is dbms", "what is full form of dbms"],
+        "responses": ["database management system", "dbms stands for database management system", "A database management system (or DBMS) is essentially nothing more than a computerized data-keeping system.","This is the software helps the user to interact with the database. It allows the users to insert, delete, update or retrieve the data.  All these operations are handled by query languages like MySQL, Oracle etc."],
+        "context": [""]
+    },
+    {"tag":"rdbms",
+        "patterns": ["rdbms", "what is rdbms", "what is full form of rdbms","rdbms"],
+        "responses": ["relational database management system", "rdbms stands for relational database management system", "A relational database management system (or RDBMS) is essentially nothing more than a computerized data-keeping system which stores the data in the form of reations or tables","rdbms is the extension of the dbms, which stores the structured data in the form of tables/relations"],
+        "context": [""]
+    },
+    {"tag": "applications",
+        "patterns": ["applications of dbms", "uses of dbms", "dbms used for", "what is the dbms used for"],
+        "responses": ["It the application program which helps the users to interact with the database by means of query languages. Database application will not have any idea about the underlying DBMS."],
+        "context": [""]
+    },
+    {"tag": "structure",
+     "patterns": ["Structure of Database Management System (DBMS)","dbms consists of ","parts of dbms"],
+     "responses": ["database, database application, dbms, user,ddl, ddl compiler,Data Dictionary,Compiled DML, Data Files,Stored Data Manager, Query Optimizer, DML Compiler, Structure of Database Management System (DBMS), Structure of Database Management System (DBMS)"],
+     "context": [""]
+    },
+    {"tag": "filesystem",
+     "patterns": ["what is file system","file system"],
+     "responses": ["The file system is a collection of data. In this system, the user has to write the procedures for managing the database.","Data is distributed in many files, and it may be of different formats, so it isn't easy to share data.","The file system doesn't have a crash mechanism, i.e., if the system crashes while entering some data, then the content of the file will be lost.","In the File system, concurrent access has many problems like redirecting the file while deleting some information or updating some information."],
+     "context": [""]
+    },
+    {"tag": "differencedbmsrdbms",
+     "patterns": ["what is difference between dbms and rdbms", "dbms rdbms difference", "dbms vs rdbms", "dbms and rdbms"],
+     "responses": ["DBMS applications store data as file and RDBMS applications store data in a tabular form", "Normalization is not present in DBMS but present in RDBMS","DBMS does not support distributed database but RDBMS do support","Examples of DBMS are file systems, xml etc. whereas Example of RDBMS are mysql, postgre, sql server, oracle etc."],
+     "context": [""]
+    },
+    {"tag": "Architecture",
+     "patterns": ["DBMS architecture","types of architectures", "3 tier architecture"],
+     "responses": ["Database architecture can be seen as a single tier or multi-tier. But logically, database architecture is of two types like: 2-tier architecture and 3-tier architecture.", "1- tier architecture, 2 tier architecture, 3 tier architecture"],
+     "context": [""]
+    },
+    {"tag": "onetier",
+     "patterns": ["what is one tier architecture", "1 tier architecture", "define 1 tier architecture"],
+     "responses": ["In this architecture, the database is directly available to the user. It means the user can directly sit on the DBMS and uses it.","Any changes done here will directly be done on the database itself. It doesn't provide a handy tool for end users.","The 1-Tier architecture is used for development of the local application, where programmers can directly communicate with the database for the quick response."],
+     "context": [""]
+    },
+    {"tag": "twotier",
+     "patterns": ["what is two tier architecture", "2 tier architecture", "define 2 tier architecture"],
+     "responses": ["The 2-Tier architecture is same as basic client-server. In the two-tier architecture, applications on the client end can directly communicate with the database at the server side. For this interaction, API's like: ODBC, JDBC are used.","The user interfaces and application programs are run on the client-side in 2 tier.","The server side is responsible to provide the functionalities like: query processing and transaction management in two tier", "In two tier To communicate with the DBMS, client-side application establishes a connection with the server side."],
+     "context": [""]
+    },
+    {"tag": "threetier",
+     "patterns": ["what is three tier architecture", "3 tier architecture", "define 3 tier architecture"],
+     "responses": ["The 3-Tier architecture contains another layer between the client and server. In this architecture, client can't directly communicate with the server.","In three tier ", "The application on the client-end interacts with an application server which further communicates with the database system.", "End user has no idea about the existence of the database beyond the application server. The database also has no idea about any other user beyond the application in three tier", "The 3-Tier architecture is used in case of large web application."],
+     "context": [""]
+    },
+    {"tag": "schema",
+     "patterns": ["what is schema", "define schema","tell me about schema in dbms", "what is schema in dbms"],
+     "responses": ["schema is the logical or conceptual view or structure of the database","A database schema is a structure that represents the logical storage of the data in a database","A database schema is the logical representation of a database, which shows how the data is stored logically in the entire database.","The schema does not physically contain the data itself; instead, it gives information about the shape of data and how it can be related to other tables or models"],
+     "context": [""]
+    },
+    {"tag": "three_schema_architecture",
+    "patterns": ["what is three schema architecture", "define three schema architecture", "tell me about three schema architecture","do you know three schema architecture"],
+    "responses": ["The three schema architecture is also called ANSI/SPARC architecture or three-level architecture.","This framework is used to describe the structure of a specific database system.","The three schema architecture is also used to separate the user applications and physical database.","The three schema architecture contains three-levels. It breaks the database down into three different categories."],
+    "context": [""]
+    },
+    {"tag": "data_models",
+     "patterns": ["tell me about data models in dbms", "what are the data models in dbms","data models"],
+     "responses": ["There are 4 types of data models in dbms, that are relational data model, Entity-Relationship Data Model, Object-based Data Model, Semistructured Data Model"],
+     "context": [""]
+    },
+    {"tag": "learning",
+     "patterns": ["why should i learn dbms", "why should i choose dbms", "why dbms","applications of dbms"],
+     "responses": ["dbms deals with Real-world entity along with it contains Relation-based tables,Isolation of data and application,Less redundancy,Consistency and it works by the Consistency","it posseses ACID Properties, Multiuser and Concurrent Access, Multiple views, Security"],
+     "context": [""]
+    }
+    ,
+    {"tag": "atomicity",
+     "patterns": ["what is mean by atomicity in dbms", "what is atomicity property","atomicity property"],
+     "responses": ["Atomicity is a feature of databases systems dictating where a transaction must be all-or-nothing."," the transaction must either fully happen, or not happen at all. It must not complete partially."],
+     "context": [""]
+    },
+    {"tag": "ACID_properties",
+     "patterns": ["what are ACID properties","what is ACID","do you know ACID properties", "tell me something about ACID properties"],
+     "responses": ["DBMS follows the concepts of Atomicity, Consistency, Isolation, and Durability (normally shortened as ACID)"," ACID properties help the database stay healthy in multi-transactional environments and in case of failure."],
+     "context": [""]
+    },
+    {"tag": "consistency",
+     "patterns": ["what is mean by consistency in dbms", "what is consistency property","consistency property"],
+     "responses": ["Consistency (or Correctness) in database systems refers to the requirement that any given database transaction must change affected data only in allowed ways.","consistency simply refers to 'The amount before and after transaction should be the same and unchanged'"],
+     "context": [""]
+    },
+    {"tag": "isolation",
+     "patterns": ["what is mean by isolation in dbms", "what is isolation property","isolation property"],
+     "responses": ["Isolation determines how transaction integrity is visible to other users and systems","Isolation is typically defined at database level as a property that defines how or when the changes made by one operation become visible to others.","isolation simply defines as if the parallel processes are working concurrently, then no two or more processes get interacted"],
+     "context": [""]
+    },
+    {"tag": "durability",
+     "patterns": ["what is mean by durability in dbms", "what is durability property","durability property"],
+     "responses": ["durability is the ACID property which guarantees that transactions that have committed will survive permanently.","Once the transaction get commited, is is unchanged till next transaction"],
+     "context": [""]
+    },
+    {"tag": "metadata",
+     "patterns": ["what is mean by metadata", "metadata","tell me about metadata"],
+     "responses": ["Metadata is the data about the data->(stored in database) "],
+     "context": [""]
+    },
+    {"tag": "Data Independence",
+     "patterns": ["what is mean by Data Independence", "Data Independence","tell me about Data Independence","Do you know about data independence","what are the types of data independence"],
+     "responses": ["The actual data and the metadata are not dependent on each are, they are stored separately so that it will be easy to update the database with time ","there are two types of data independence 1)Logical data independence. 2)Pphysical data independence"],
+     "context": [""]
+    },
+    {"tag": "Logical Data Independence",
+     "patterns": ["what is mean by Logical Data Independence", "Logical Data Independence","tell me about Logical Data Independence"],
+     "responses": ["Logical data is data about database, that is, it stores information about how data is managed inside. For example, a table (relation) stored in the database and all its constraints, applied on that relation.","Logical data independence is a kind of mechanism, which liberalizes itself from actual data stored on the disk. If we do some changes on table format, it should not change the data residing on the disk."],
+     "context": [""]
+    },
+    {"tag": "Physical Data Independence",
+     "patterns": ["what is mean by Physical Data Independence", "Physical Data Independence","tell me about Physical Data Independence"],
+     "responses": ["physical data is the actual data stored in database, Physical data independence is the power to change the physical data without impacting the schema or logical data."],
+     "context": [""]
+    },
+    {"tag": "ER model",
+     "patterns": ["what is mean by ER model", "ER model","tell me about ER model","what is entity relationship model", "entity relationship model"],
+     "responses": ["ER model or entity relationship model is the logical or conceptual view of the database","ER model is made up of entities, relationships and attributes which altogether form the conceptual or logical view of database"],
+     "context": [""]
+    },
+    {"tag": "entity",
+     "patterns": ["what is mean by entity", "entity","tell me about entity","do you know entity"],
+     "responses": ["Entity is any real world object that can be easily identified, and we are storing data about it in database "],
+     "context": [""]
+    },
+    {"tag": "entityset",
+     "patterns": ["what is mean by entity set", "entity set","tell me about entity set","do you know entity set"],
+     "responses": ["Entity set is the collection of similar type of entities"],
+     "context": [""]
+    },
+    {"tag": "attributes",
+     "patterns": ["what is mean by attribute", "attribute","attribute","do you know attribute"],
+     "responses": ["Attribute means the properties of entities"],
+     "context": [""]
+    },
+    {"tag": "types_attributes",
+     "patterns": ["what are the types of attributes", "types of attributes","do you know types of attribute" ,"define types of attributes"],
+     "responses": [" there are 5 types of attributes -> Simple attribute, Composite attribute, Derived attribute ,Single-value attribute, Multi-value attribute "],
+     "context": [""]
+    },
+    {"tag": "Simple attribute",
+     "patterns": ["what is mean by Simple attribute", "Simple attribute","do you know Simple attribute"],
+     "responses": ["Simple attributes are atomic values, which cannot be divided further. For example, a student's phone number is an atomic value of 10 digits."],
+     "context": [""]
+    },
+    {"tag": "Composite attribute",
+     "patterns": ["what is mean by Composite attribute", "Composite attribute","do you know Composite attribute"],
+     "responses": ["Composite attributes are made of more than one simple attribute. For example, a student's complete name may have first_name and last_name."],
+     "context": [""]
+    },
+    {"tag": "Derived attribute",
+     "patterns": ["what is mean by Derived attribute", "Derived attribute","do you know Derived attribute"],
+     "responses": [" Derived attributes are the attributes that do not exist in the physical database, but their values are derived from other attributes present in the database. For example, average_salary in a department should not be saved directly in the database, instead it can be derived. For another example, age can be derived from data_of_birth."],
+     "context": [""]
+    },
+    {"tag": "Single-value attribute",
+     "patterns": ["what is mean by Single-value attribute", "Single-value attribute","do you know Composite attribute"],
+     "responses": ["Single-value attributes contain single value. For example − Social_Security_Number."],
+     "context": [""]
+    },
+    {"tag": "Multi-value attribute",
+     "patterns": ["what is mean by Multi-value attribute", "Multi-value attribute","do you know Multi-value attribute"],
+     "responses": ["Multi-value attributes may contain more than one values. For example, a person can have more than one phone number, email_address, etc."],
+     "context": [""]
+    },
+    {"tag": "Single-value attribute",
+     "patterns": ["what is mean by Single-value attribute", "Single-value attribute","do you know Composite attribute"],
+     "responses": ["Single-value attributes contain single value. For example − Social_Security_Number."],
+     "context": [""]
+    },
+    {"tag": "keys",
+     "patterns": ["what is mean by keys in dbms", "key", "keys"],
+     "responses": ["Key is an attribute or collection of attributes that uniquely identifies an entity among entity set."],
+     "context": [""]
+    },
+    {"tag": "super key",
+     "patterns": ["what is mean by super key", "super key"],
+     "responses": ["A key in DBMS is an attribute or a set of attributes that help to uniquely identify a tuple (or row) in a relation (or table). "],
+     "context": [""]
+    },
+    {"tag": "Candidate Key",
+     "patterns": ["what is mean by candidate key", "candidate key"],
+     "responses": ["A minimal super key is called a candidate key. An entity set may have more than one candidate key."],
+     "context": [""]
+    },
+    {"tag": "Primary Key",
+     "patterns": ["what is mean by Primary Key", "Primary Key"],
+     "responses": ["A primary key is one of the candidate keys chosen by the database designer to uniquely identify the entity set."],
+     "context": [""]
+    },
+    {"tag": "Relationship",
+     "patterns": ["what is mean by Relationship", "Relationship","Relationship set"],
+     "responses": ["The association among entities is called a relationship. For example, an employee works_at a department, a student enrolls in a course. Here, Works_at and Enrolls are called relationships.","A set of relationships of similar type is called a relationship set. Like entities, a relationship too can have attributes. These attributes are called descriptive attributes."],
+     "context": [""]
+    },
+    {"tag": "degree of Relationship",
+     "patterns": ["what is mean by degree of Relationship", "degree of Relationship"],
+     "responses": ["The number of participating entities in a relationship defines the degree of the relationship."],
+     "context": [""]
+    },
+    {"tag": "Cardinality",
+     "patterns": ["what is Cardinality", "Cardinality"],
+     "responses": ["Cardinality defines the number of entities in one entity set, which can be associated with the number of entities of other set via relationship set."],
+     "context": [""]
+    },
+    {"tag": "types of Cardinality",
+     "patterns": ["what are the types of Cardinality", "Cardinality types"],
+     "responses": ["one to one, many to one, many to many, one to many"],
+     "context": [""]
+    },
+    {"tag": "one to one",
+     "patterns": ["what is one to one Cardinality", "one to one cardinality"],
+     "responses": [" One entity from entity set A can be associated with at most one entity of entity set B and vice versa."],
+     "context": [""]
+    },
+    {"tag": "many to one",
+     "patterns": ["what is many to one Cardinality", "many to one cardinality"],
+     "responses": [" More than one entities from entity set A can be associated with at most one entity of entity set B, however an entity from entity set B can be associated with more than one entity from entity set A."],
+     "context": [""]
+    },
+    {"tag": "One-to-many",
+     "patterns": ["what is one to many cardinality", "one to many cardinality"],
+     "responses": ["One entity from entity set A can be associated with more than one entities of entity set B however an entity from entity set B, can be associated with at most one entity."],
+     "context": [""]
+    },
+    {"tag": "Many-to-many",
+     "patterns": ["what is Many-to-many cardinality", "Many-to-many cardinality"],
+     "responses": ["One entity from A can be associated with more than one entity from B and vice versa."],
+     "context": [""]
+    },
+    {"tag": "Generalization",
+     "patterns": ["what is mean by Generalization", "Generalization","Generalization","do you know Generalization, tell me about Generalization"],
+     "responses": ["Going up in the ER model is called generalization","where entities are clubbed together to represent generalized view."],
+     "context": [""]
+    },
+    {"tag": "Specialization",
+     "patterns": ["what is mean by Specialization", "Specialization","do you know Specialization", "tell me about Specialization"],
+     "responses": ["Going down/deep in the ER model is called Specialization","Specialization is the opposite of generalization", " In specialization, a group of entities is divided into sub-groups based on their characteristics."],
+     "context": [""]
+    },
+    {"tag": "Inheritance",
+     "patterns": ["what is mean by Inheritance", "Inheritance","do you know Inheritance", "tell me about Inheritance"],
+     "responses": ["Inheritance is an important feature of Generalization and Specialization. It allows lower-level entities to inherit the attributes of higher-level entities."],
+     "context": [""]
+    },
+    {"tag": "Relational algebra",
+     "patterns": ["what is Relational algebra", "Relational algebra","do you know Relational algebra", "tell me about Relational algebra"],
+     "responses": ["Relational algebra is a procedural query language, which takes instances of relations as input and yields instances of relations as output. It uses operators to perform queries. An operator can be either unary or binary", "Relational algebra is performed recursively on a relation and intermediate results are also considered relations."],
+     "context": [""]
+    },
+    {"tag": "algebra operations",
+     "patterns": ["what are the relational algebra operations", "Relational algebra operations","do you know Relational algebra operations", "tell me about Relational algebra  operations"],
+     "responses": ["The fundamental operations of relational algebra are as follows − Select, Project, Union, Set ,different, Cartesian product,Rename"],
+     "context": [""]
+    },
+    {"tag": "Relational Calculus",
+     "patterns": ["what is the relational calculus", "relational calculus"],
+     "responses": ["Relational Calculus is a non-procedural query language, that is, it tells what to do but never explains how to do it."],
+     "context": [""]
+    },
+    {"tag": "SQL",
+     "patterns": ["what is SQL", "SQL", "structured query language", "tell me about SQL","what are the uses of SQL"],
+     "responses": ["SQL is structured query language it comprises both data definition and data manipulation languages.", "SQL is a programming language for Relational Databases.", "SQL  is designed over relational algebra and tuple relational calculus. SQL comes as a package with all major distributions of RDBMS.","data definition properties of SQL, one can design and modify database schema, whereas data manipulation properties allows SQL to store and retrieve data from database."],
+     "context": [""]
+    },
+    {"tag": "DDL",
+     "patterns": ["what is DDL", "data defination language"],
+     "responses": ["DDL or data defination language is used to do the operations on the table, like create table, alter table, delete/drop or truncate the table "],
+     "context": [""]
+    },
+    {"tag": "DDL_operations",
+     "patterns": ["what are the commands included in DDL"],
+     "responses": ["create, alter, drop, truncate are the main commands included in DDL"],
+     "context": [""]
+    },
+    {"tag": "create",
+     "patterns": ["syntax of create command", "use of create command"],
+     "responses": ["create table table_name"],
+     "context": [""]
+    },
+    {"tag": "alter",
+     "patterns": ["syntax of alter command", "use of alter command"],
+     "responses": [" alter table table_name operation_name column_name datatype"],
+     "context": [""]
+    },
+    {"tag": "drop",
+     "patterns": ["syntax of drop command", "use of drop command"],
+     "responses": ["drop table table_name"],
+     "context": [""]
+    },
+    {"tag": "truncate",
+     "patterns": ["syntax of truncate command", "use of truncate command"],
+     "responses": ["truncate table table_name"],
+     "context": [""]
+    },
+    {"tag": "DML",
+     "patterns": ["what is DML", "data manipulation language", "DML"],
+     "responses": ["DML is data manipulation language is used for dealing with the data in the database ","DML modifies the database instance by inserting, updating and deleting its data"],
+     "context": [""]
+    },
+    {"tag": "DML_operations",
+     "patterns": ["what are the commands included in DML"],
+     "responses": ["insert, update, delete, select"],
+     "context": [""]
+    },
+    {"tag": "Functional_Dependency",
+     "patterns": ["what is functional dependency","why the functional dependency is important","functional dependency"],
+     "responses": ["Functional dependency (FD) is a set of constraints between two attributes in a relation. Functional dependency says that if two tuples have same values for attributes A1, A2,..., An, then those two tuples must have to have same values for attributes B1, B2, ..., Bn.","Functional dependency is represented by an arrow sign (→) that is, X→Y, where X functionally determines Y. The left-hand side attributes determine the values of attributes on the right-hand side."],
+     "context": [""]
+    },
+    {"tag": "Armstrong's Axioms",
+     "patterns": ["what is Armstrong's Axioms","tell me about armstrong's axiom","Armstrong's Axioms"],
+     "responses": ["Armstrong's Axioms are a set of rules, that when applied repeatedly, generates a closure of functional dependencies, that consistes of Reflexive rule − If alpha is a set of attributes and beta is_subset_of alpha, then alpha holds beta. Augmentation rule − If a → b holds and y is attribute set, then ay → by also holds. That is adding attributes in dependencies, does not change the basic dependencies. Transitivity rule − Same as transitive rule in algebra, if a → b holds and b → c holds, then a → c also holds. a → b is called as a functionally that determines b."],
+     "context": [""]
+    },
+    {"tag": "Trivial Functional Dependency",
+     "patterns": ["what is Trivial Functional Dependency","tell me about Trivial Functional Dependency"," do you know Trivial Functional Dependency"],
+     "responses": ["Trivial − If a functional dependency (FD) X → Y holds, where Y is a subset of X, then it is called a trivial FD. Trivial FDs always hold."],
+     "context": [""]
+    },
+    {"tag": "Non-Trivial Functional Dependency",
+     "patterns": ["what is Non-Trivial Functional Dependency","tell me about Non-Trivial Functional Dependency"," do you know Non-Trivial Functional Dependency"],
+     "responses": [" If an FD X → Y holds, where Y is not a subset of X, then it is called a non-trivial FD."],
+     "context": [""]
+    },
+    {"tag": "Completely non-trivial Functional Dependency",
+     "patterns": ["what is Completely non-trivial Functional Dependency","tell me about Completely non-triviall Functional Dependency"," do you know Completely non-trivial Functional Dependency"],
+     "responses": ["If an FD X → Y holds, where x intersect Y = Φ, it is said to be a completely non-trivial FD."],
+     "context": [""]
+    },
+    {"tag": "Normalization",
+     "patterns": ["what is normalization","define normalization"],
+     "responses": ["Normalization is to remove the anomalies from the database","normalization is Update anomalies, Deletion anomalies, Insert anomalies"],
+     "context": [""]
+    },
+    {"tag": "anomalies",
+     "patterns": ["what is mean by anomalise"],
+     "responses": ["Anomalies are some impurities in database "],
+     "context": [""]
+    },
+    {"tag": "1NF",
+     "patterns": ["what is mean first normal form ","define first normal form", "define 1nf", "what is 1nf"],
+     "responses": ["First Normal Form is defined in the definition of relations (tables) itself. This rule defines that all the attributes in a relation must have atomic domains. The values in an atomic domain are indivisible units."],
+     "context": [""]
+    },
+    {"tag": "Prime attribute",
+     "patterns": ["what are the prime attributes"],
+     "responses": ["The attributes part of the candidate key are known as prime attributes"],
+     "context": [""]
+    },
+    {"tag": "Non-Prime attribute",
+     "patterns": ["what are the Non-prime attributes"],
+     "responses": ["The attributes are not the part of the candidate key are known as non-prime attributes"],
+     "context": [""]
+    },
+    {"tag": "2NF",
+     "patterns": ["2NF", "second normal form", "define second normal form", "elaborate second normal form", "clear my second normal form/2NF"],
+     "responses": ["If we follow second normal form, then every non-prime attribute should be fully functionally dependent on prime key attribute. That is, if X → A holds, then there should not be any proper subset Y of X, for which Y → A also holds true."],
+     "context": [""]
+    },
+    {"tag": "3NF",
+     "patterns": ["3NF", "third  normal form", "define third normal form", "elaborate third normal form", "clear my third normal form/3NF"],
+     "responses": ["For the relation to be in third normal form, it should be in second normal form and there should not any transitive dependency"],
+     "context": [""]
+    },
+    {"tag": "transitive dependency",
+     "patterns": ["transitive dependency","what is transitive dependency", "define transitive dependency"],
+     "responses": ["When an indirect relationship causes functional dependency it is called Transitive Dependency. If  P -> Q and Q -> R is true, then P-> R is a transitive dependency."],
+     "context": [""]
+    },
+    {"tag": "BCNF",
+     "patterns": ["define BCNF", "what is bcnf", "tell me about bcnf","Boyce-Codd Normal Form"],
+     "responses": ["BCNF is Boyce-Codd Normal Form which is the extension of third normal form with more restrictions","For any non-trivial functional dependency, X → A, X must be a super-key."],
+     "context": [""]
+    },
+    {"tag": "Join",
+     "patterns": ["define joins","what is the term joins in dbms", "what are the joins"],
+     "responses": ["Join is a combination of a Cartesian product followed by a selection process. A Join operation pairs two tuples from different relations, if and only if a given join condition is satisfied.","joins are simply defined as the cross product with some condition"],
+     "context": [""]
+    },
+    {"tag": "Equijoin",
+     "patterns": ["define Equijoin","what is the term Equijoin in dbms","what is equijoin"],
+     "responses": ["When Theta join uses only equality comparison operator, it is said to be equijoin. The above example corresponds to equijoin."],
+     "context": [""]
+    },
+    {"tag": "theta join",
+     "patterns": ["define theta join","what is the term theta join in dbms","what is theta join"],
+     "responses": ["Theta join combines tuples from different relations provided they satisfy the theta condition. The join condition is denoted by the symbol θ."],
+     "context": [""]
+    },
+    {"tag": "Natural Join",
+     "patterns": ["define Natural Join","what is the term Natural Join in dbms","what is Natural Join"],
+     "responses": ["Natural join does not use any comparison operator. It does not concatenate the way a Cartesian product does. We can perform a Natural Join only if there is at least one common attribute that exists between two relations. In addition, the attributes must have the same name and domain."],
+     "context": [""]
+    },
+    {"tag": "Outer Joins",
+     "patterns": ["define theta Outer Joins","what is the term Outer Joins in dbms","what is Outer Joins"],
+     "responses": ["we need to use outer joins to include all the tuples from the participating relations in the resulting relation."],
+     "context": [""]
+    },
+    {"tag": "Left Outer Join",
+     "patterns": ["define Left Outer Join","what is the termLeft Outer Join in dbms","what is Left Outer Join"],
+     "responses": ["we need to use outer joins to include all the tuples from the participating relations in the resulting relation."],
+     "context": [""]
+    },
+    {"tag": "Right Outer Join",
+     "patterns": ["define Right Outer Join","what is the term Right Outer Join in dbms","what is Right Outer Join"],
+     "responses": ["All the tuples from the Right relation, S, are included in the resulting relation. If there are tuples in S without any matching tuple in R, then the R-attributes of resulting relation are made NULL."],
+     "context": [""]
+    },
+    {"tag": "Full Outer Join",
+     "patterns": ["define Full Outer Join","what is the term Full Outer Join in dbms","what is Full Outer Join"],
+     "responses": ["All the tuples from both participating relations are included in the resulting relation. If there are no matching tuples for both relations, their respective unmatched attributes are made NULL"],
+     "context": [""]
+    },
+    {"tag": "storage",
+     "patterns": ["define storage system in DBMS","memory hierarchy in dbms","DBMS storage system"],
+     "responses": ["Databases are stored in file formats, which contain records. At physical level, the actual data is stored in electromagnetic format on some device. These storage devices can be broadly categorized into three types − 1)primary memory 2)secondary memory 3)tirtiary memory     "],
+     "context": [""]
+    },
+    {"tag": "Primary storage",
+     "patterns": ["define Primary storage in DBMS","what is primary storage in memory storage in dbms"],
+     "responses": ["The memory storage that is directly accessible to the CPU comes under this category. CPU's internal memory (registers), fast memory (cache), and main memory (RAM) are directly accessible to the CPU, as they are all placed on the motherboard or CPU chipset. This storage is typically very small, ultra-fast, and volatile. Primary storage requires continuous power supply in order to maintain its state. In case of a power failure, all its data is lost."],
+     "context": [""]
+    },
+    {"tag": "Secondary storage",
+     "patterns": ["define Secondary storage in DBMS","what is Secondary storage in memory storage in dbms"],
+     "responses": ["Secondary storage devices are used to store data for future use or as backup. Secondary storage includes memory devices that are not a part of the CPU chipset or motherboard, for example, magnetic disks, optical disks (DVD, CD, etc.), hard disks, flash drives, and magnetic tapes."],
+     "context": [""]
+    },
+    {"tag": "tertiary storage",
+     "patterns": ["define tertiary storage in DBMS","what is tertiary storage in memory storage in dbms"],
+     "responses": ["Tertiary storage is used to store huge volumes of data. Since such storage devices are external to the computer system, they are the slowest in speed. These storage devices are mostly used to take the back up of an entire system. Optical disks and magnetic tapes are widely used as tertiary storage."],
+     "context": [""]
+    },
+    {"tag": "Indexing",
+     "patterns": ["what is indexing inn dbms", "tell me about indexing","do you know indexing"],
+     "responses": ["Indexing is a data structure technique to efficiently retrieve records from the database files based on some attributes on which the indexing has been done. Indexing in database systems is similar to what we see in books."],
+     "context": [""]
+    },
+    {"tag": "B plus tree",
+     "patterns": ["define B+ tree", " what is B+ tree in dbms", "tell me about b+ tree"],
+     "responses": ["A B+ tree is a balanced binary search tree that follows a multi-level index format. The leaf nodes of a B+ tree denote actual data pointers. B+ tree ensures that all leaf nodes remain at the same height, thus balanced. Additionally, the leaf nodes are linked using a link list; therefore, a B+ tree can support random access as well as sequential access."],
+     "context": [""]
+    },
+    {"tag": "hashing",
+     "patterns": ["what is mean by hashing","define hashing","hashing"],
+     "responses": ["Hashing is an effective technique to calculate the direct location of a data record on the disk without using index structure."],
+     "context": [""]
+    },
+    {"tag": "types of hashing",
+     "patterns": ["what are the types of hashing"],
+     "responses": ["static  hashing, dynamic hashing"],
+     "context": [""]
+    },
+    {"tag": "transaction",
+     "patterns": ["what is transaction?","define transaction","tell me about transaction"],
+     "responses": ["A transaction can be defined as a group of tasks. A single task is the minimum processing unit which cannot be divided further."],
+     "context": [""]
+    },
+    {"tag": "Concurrency",
+     "patterns": ["what is Concurrency Control?","define Concurrency Control","tell me about Concurrency Control"],
+     "responses": ["In a multiprogramming environment where multiple transactions can be executed simultaneously, it is highly important to control the concurrency of transactions. We have concurrency control protocols to ensure atomicity, isolation, and serializability of concurrent transactions."],
+     "context": [""]
+    },
+    {"tag": "Deadlock",
+     "patterns": ["define deadlock in DBMS","what is deadlock"],
+     "responses": ["In a multi-process system, deadlock is an unwanted situation that arises in a shared resource environment, where a process indefinitely waits for a resource that is held by another process."],
+     "context": [""]
+    },
+    {"tag": "backup",
+     "patterns": ["what to do if the data is erased unexpectly","backup","Loss of Volatile Storage"],
+     "responses": ["A catastrophic failure is one where a stable, secondary storage device gets corrupt. With the storage device, all the valuable data that is stored inside is lost. We have two different strategies to recover data from such a catastrophic failure"],
+     "context": [""]
+    },
+    {"tag": "users dbms",
+     "patterns": ["who are the users of dbms","dbms is mostly used by whom"],
+     "responses": ["DBMS is used by everyone but the users are divided in some sort as follows: Administrators, Administrators, End Users"],
+     "context": [""]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+}
